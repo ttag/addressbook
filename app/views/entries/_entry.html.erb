@@ -1,0 +1,11 @@
+<div id=<%= dom_id(entry)%> class="entry">
+
+
+ <%= entry.name %>
+<%= entry.address %>
+<%=entry.phone%>
+  <%=entry.email%>
+    <%= link_to "Destroy", entry,:remote => true,  :confirm => "You Sure", :method => :delete %>
+  
+
+</div>

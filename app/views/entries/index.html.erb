@@ -1,29 +1,21 @@
 <h1>Listing entries</h1>
-
-<table>
+<table> 
   <tr>
-    <th>Name</th>
+  <th>Name</th>
     <th>Address</th>
     <th>Phone</th>
     <th>Email</th>
     <th></th>
     <th></th>
     <th></th>
-  </tr>
-
-<% @entries.each do |entry| %>
-  <tr>
-    <td><%= entry.name %></td>
-    <td><%= entry.address %></td>
-    <td><%= entry.phone %></td>
-    <td><%= entry.email %></td>
-    <td><%= link_to 'Show', entry %></td>
-    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-    <td><%= link_to 'Destroy', entry, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+    </tr>
 </table>
 
-<br />
+<div id="entries">
+  <%= render @entries %>
+</div>
 
-<%= link_to 'New Entry', new_entry_path %>
+
+<h3>Add your new entry:</h3>
+
+<%= render 'form' %>
